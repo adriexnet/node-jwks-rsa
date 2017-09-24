@@ -33,7 +33,7 @@
   "scripts": {
     "clean": "rimraf lib/",
     "compile": "babel -d lib/ src/",
-    "prepublish": "npm run clean && npm run compile",
+    "prepublish": "npm run compile",
     "postinstall": "npm run clean && npm run compile",
     "test": "NODE_ENV=test mocha --compilers js:babel-core/register --timeout 5000 $(find ./tests -name *.tests.js)",
     "test-watch": "NODE_ENV=test mocha --compilers js:babel-core/register --timeout 5000 $(find ./tests -name *.tests.js) --watch",
